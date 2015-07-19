@@ -5,6 +5,12 @@ var topHint = {
   "suggestHint": ["八仙樂園", "八仙爆炸", "八仙山森林遊樂園", "八仙樂園門票", "八仙樂園爆炸"]
 };
 
+var searchResult = {
+  "topSearch": ["世大運", "八仙", "柯p", "課綱微調", "tutorABC"],
+  "topTopic": ["小資投資", "樂活料理"],
+  "suggestHint": ["八仙樂園", "八仙爆炸", "八仙山森林遊樂園", "八仙樂園門票", "八仙樂園爆炸"]
+};
+
 var wearther = {
     "location": "Toronto, Canada",
     "three_day_forecast": [
@@ -27,4 +33,5 @@ var wearther = {
 };
 
 exports.topHint = topHint;
+exports.searchResult = searchResult;
 exports.wearther = wearther;
