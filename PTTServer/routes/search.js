@@ -35,7 +35,52 @@ router.get('/', function(req, res) {
 
 });
 
-//define top search hint
+//search profile
+router.get('/searchArticle', function(req, res) {
+  console.log('search article ');
+  switch (req.query.agent) {
+    case 'iphone':
+    console.log('iphone');
+    IphoneSearchCrlt.searchArticle(req, res);
+      break;
+
+    case 'android':
+    console.log('android');
+    //res.send(EXJSON.topHint);
+      break;
+
+    default:
+    console.log('web device');
+    //res.send(EXJSON.topHint);
+
+  };
+
+});
+
+//search profile
+router.get('/searchProfile', function(req, res) {
+  console.log('search hint ');
+  switch (req.query.agent) {
+    case 'iphone':
+    console.log('iphone');
+    IphoneSearchCrlt.searchProfile(req, res);
+      break;
+
+    case 'android':
+    console.log('android');
+    //res.send(EXJSON.topHint);
+      break;
+
+    default:
+    console.log('web device');
+    //res.send(EXJSON.topHint);
+
+  };
+
+});
+
+
+//define top search hint for article
 router.get('/searchHint', function(req, res) {
   console.log('search hint ');
   switch (req.query.agent) {
@@ -56,6 +101,8 @@ router.get('/searchHint', function(req, res) {
   };
 
 });
+
+
 
 
 module.exports = router;

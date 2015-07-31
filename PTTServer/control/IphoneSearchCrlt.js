@@ -13,9 +13,28 @@ function searchHint(req, res) {
   res.send(EXJSON.topHint);
 };
 
+function searchProfile(req, res) {
+  var parameters = req.query;
+  console.log(parameters.hint);
+  //calculate
+
+  //send profile
+  res.send(EXJSON.profileEX);
+};
+
+function searchArticle(req, res) {
+  var parameters = req.query;
+  console.log(parameters.hint);
+  //calculate
+
+  //send profile
+  res.send(EXJSON.profileEX);
+};
 
 
 
 
 exports.search = search;
 exports.searchHint = searchHint;
+exports.searchProfile = searchProfile;
+exports.searchArticle = searchArticle;
