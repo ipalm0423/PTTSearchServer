@@ -20,6 +20,7 @@ function searchProfile(req, res) {
 
   //send profile
   res.send(EXJSON.profileEX);
+  console.log(EXJSON.profileEX.lastOnline);
 };
 
 function searchArticle(req, res) {

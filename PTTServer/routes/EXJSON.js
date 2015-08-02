@@ -1,3 +1,6 @@
+var moment = require('moment');
+
+
 
 var topHint = {
   "topSearch": ["世大運", "八仙", "柯p", "課綱微調", "tutorABC"],
@@ -18,30 +21,11 @@ var searchResult = {
   "names" : ["我是人腐", "我是鞋子", "我是ＸＸ"],
   "titles" : ["", "", "有沒有鞋子的八卦"],
   "subTitles" : ["9.2", "4.8", "有沒有鞋子的八卦"],
-  "times" : [Date.now, Date.now, Date.now],
+  "times" : [moment().unix(), moment().unix(), moment().unix()],
   "icons" : ["http://PTTSearch/picture/5566forever", "http://PTTSearch/picture/5566forever", "http://PTTSearch/picture/5566forever"],
 };
 
-var profileEX = {
-  "uid" : "profileuid1234",
-  "account" : "account123",
-  "name" : "5566forever",
-  "icon" : "http://PTTSearch/picture/5566forever",
-  "score" : "9.2",
-  "lastOnline": Date.now,
-  "osArticle" : "3",
-  "ofArticle" : "2",
-  "totalArticle" : "34",
-  "follower" : "56",
-  "redPush" : "200",
-  "greenPush" : "123"
-};
-
-var noResult = {
-  "uid" : null
-};
-
-var titleEC = {
+var titleEX = {
   "uid" : "uid1234",
   "url" : "https://www.ptt.cc/bbs/Gossiping/M.1437382721.A.F68.html",
   "ip" : "220.128.96.188",
@@ -50,7 +34,7 @@ var titleEC = {
   "subTitle" : "問卦",
   "title" : "有沒有五五六六的八卦",
   "board" : "Gossiping",
-  "time" : Date.now,
+  "time" : moment().unix(),
   "totalPush" : "26",
   "icon" : "http://PTTSearch/picture/5566forever",
   "politic" : "left",
@@ -58,10 +42,48 @@ var titleEC = {
   "childuid" : ["childuid123", "childuid1234", "childuid12345"],
   "tag" : ["5566", "五五六六"]
 };
+var pushEX1 = {
+  //此uid為所屬文章的uid
+  "uid" : "uid1234",
+  "type" : "push",
+  "subType" : "red",
+  "title" : "有沒有五五六六的八卦",
+  "content" : "你那天穿短褲嗎?",
+  "account" : "gn01838335",
+  "time" : moment().unix(),
+  "floor" : "1",
+  "childfloor" : "0"
+};
+
+var profileEX = {
+  "uid" : "profileuid1234",
+  "account" : "account123",
+  "name" : "5566forever",
+  "icon" : "http://PTTSearch/picture/5566forever",
+  "score" : "9.2",
+  "lastOnline": moment().unix(),
+  "ip" : "192.168.1.1",
+  "osArticle" : "3",
+  "ofArticle" : "2",
+  "totalArticle" : "34",
+  "totalPush" : "120",
+  "follower" : "56",
+  "redPush" : "200",
+  "greenPush" : "123",
+  "pushList" : [pushEX1, pushEX1, pushEX1],
+  "articleList" : [titleEX],
+  "commentList" : [pushEX1, pushEX2, pushEX3]
+};
+
+var noResult = {
+  "uid" : null
+};
+
+
 
 var articleEX = {
   "uid" : "uid1234",
-  "muid" : "motheruid1234",
+  "motheruid" : "motheruid1234",
   "content" : [Content0, Content1],
   "signature" : "套一句kobe的話 我會打到我不能打為止  我如果打得很爛 我不會讓我的粉絲看到我很爛的一面 我會自己退出 我覺得如果你有夢想的 就不要怕任何阻礙去追尋 不放手 直到夢想到手 - westdoor",
   "push" : [pushEX1, pushEX2, pushEX3, pushEX1, pushEX2]
@@ -72,9 +94,12 @@ var Content0 = {
   "uid" : "uid1234",
   "type" : "content",
   "subType" : "text",
-  "owner" : "true",
+  "title" : "有沒有五五六六的八卦",
   "content" : "Angelababy   每次看她的臉都覺得很不自然  但她堅稱自己沒整型  最近剛跟明教教主 黃曉明結婚  鄉民打趣說想看小孩長怎樣  (兩人都疑似整型)",
-  "floor" : "0"
+  "account" : "joug",
+  "time" : moment().unix(),
+  "floor" : "0",
+  "childfloor" : "0"
 };
 
 var Content1 = {
@@ -83,24 +108,15 @@ var Content1 = {
   "type" : "content",
   "subType" : "image",
   "title" : "有沒有五五六六的八卦",
-  "content" : "uid1234image",
+  "content" : "http://uid1234image",
   "account" : "joug",
-  "time" : Date.now,
-  "floor" : "1"
-};
-
-var pushEX1 = {
-  //此uid為所屬文章的uid
-  "uid" : "uid1234",
-  "type" : "push",
-  "subType" : "red",
-  "title" : "有沒有五五六六的八卦",
-  "content" : "你那天穿短褲嗎?",
-  "account" : "gn01838335",
-  "time" : Date.now,
+  "time" : moment().unix(),
   "floor" : "1",
   "childfloor" : "0"
 };
+
+
+
 var pushEX2 = {
   //此uid為所屬文章的uid
   "uid" : "uid1234",
@@ -109,7 +125,7 @@ var pushEX2 = {
   "title" : "有沒有五五六六的八卦",
   "content" : "真神奇 沒人噓?",
   "account" : "sd09090",
-  "time" : Date.now,
+  "time" : moment().unix(),
   "floor" : "2",
   "childfloor" : "0"
 };
@@ -153,6 +169,7 @@ exports.topProfileHint = topProfileHint;
 exports.topHint = topHint;
 exports.searchResult = searchResult;
 exports.profileEX = profileEX;
+exports.titleEX = titleEX;
 exports.articleEX = articleEX;
 exports.pushEX1 = pushEX1;
 exports.pushEX2 = pushEX2;
