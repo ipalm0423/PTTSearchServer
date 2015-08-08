@@ -57,6 +57,27 @@ router.get('/searchArticle', function(req, res) {
 
 });
 
+router.get('/searchPush', function(req, res) {
+  console.log('search push ');
+  switch (req.query.agent) {
+    case 'iphone':
+    console.log('iphone');
+    IphoneSearchCrlt.searchPush(req, res);
+      break;
+
+    case 'android':
+    console.log('android');
+    //res.send(EXJSON.topHint);
+      break;
+
+    default:
+    console.log('web device');
+    //res.send(EXJSON.topHint);
+
+  };
+
+});
+
 //search profile
 router.get('/searchProfile', function(req, res) {
   console.log('search hint ');

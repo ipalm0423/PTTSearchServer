@@ -8,22 +8,10 @@ var topHint = {
   "suggestHint": ["八仙樂園", "八仙爆炸", "八仙山森林遊樂園", "八仙樂園門票", "八仙樂園爆炸"]
 };
 
-var topProfileHint = {
-  "accounts": ["abc12", "abcbc", "abcccc", "abc5566", "abc888"]
-};
 
 
-var searchResult = {
-  "hint" : "五五六六",
-  "uids" : ["uid1234", "uid5678", "uid9012"],
-  "scopes" : ["profie", "profie", "article"],
-  "accounts" : ["account123", "account456", "account789"],
-  "names" : ["我是人腐", "我是鞋子", "我是ＸＸ"],
-  "titles" : ["", "", "有沒有鞋子的八卦"],
-  "subTitles" : ["9.2", "4.8", "有沒有鞋子的八卦"],
-  "times" : [moment().unix(), moment().unix(), moment().unix()],
-  "icons" : ["http://PTTSearch/picture/5566forever", "http://PTTSearch/picture/5566forever", "http://PTTSearch/picture/5566forever"],
-};
+
+
 
 var titleEX = {
   "uid" : "uid1234",
@@ -32,10 +20,10 @@ var titleEX = {
   "account" : "joug",
   "name" : "我是人腐",
   "subTitle" : "問卦",
-  "title" : "有沒有五五六六的八卦",
+  "title" : "有沒有五五六六的八卦有沒有五五六六的八卦",
   "board" : "Gossiping",
   "time" : moment().unix(),
-  "pushes" : "26",
+  "pushes" : "-26",
   "icon" : "http://PTTSearch/picture/5566forever",
   "politic" : "left",
   "motheruid" : "motheruid1234",
@@ -55,6 +43,7 @@ var pushEX1 = {
   "childfloor" : "0"
 };
 
+//output to  client
 var profileEX = {
   "uid" : "profileuid1234",
   "account" : "account123",
@@ -76,8 +65,19 @@ var profileEX = {
   "commentList" : [pushEX1, pushEX2, pushEX3]
 };
 
+var titles = {
+  "hint" : "五五六六",
+  "titles" : [titleEX, titleEX, titleEX, titleEX, titleEX, titleEX, titleEX]
+};
+
+var pushes = {
+  "hint" : "joug",
+  "contents" : [pushEX1, pushEX1, pushEX1, pushEX1, pushEX1, pushEX1, pushEX1]
+};
+
 var noResult = {
-  "uid" : null
+  "uid" : null,
+  "titles" : null
 };
 
 
@@ -138,7 +138,7 @@ var pushEX3 = {
   "title" : "有沒有五五六六的八卦",
   "content" : "胡粉快來噓阿?",
   "account" : "robertchun",
-  "time" : Date.now,
+  "time" : moment().unix(),
   "floor" : "3",
   "childfloor" : "0"
 };
@@ -166,9 +166,9 @@ var wearther = {
 };
 
 exports.noResult = noResult;
-exports.topProfileHint = topProfileHint;
 exports.topHint = topHint;
-exports.searchResult = searchResult;
+exports.titles = titles;
+exports.pushes = pushes;
 exports.profileEX = profileEX;
 exports.titleEX = titleEX;
 exports.articleEX = articleEX;
