@@ -15,7 +15,7 @@ router.use(function timeLog(req, res, next) {
 
 /* GET users listing. */
 router.get('/', function(req, res) {
-  res.send('respond with a search');
+  
   switch (req.query.agent) {
     case 'iphone':
     console.log('iphone');
@@ -57,6 +57,7 @@ router.get('/searchArticle', function(req, res) {
 
 });
 
+//search push in account
 router.get('/searchPush', function(req, res) {
   console.log('search push ');
   switch (req.query.agent) {

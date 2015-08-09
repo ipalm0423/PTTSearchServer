@@ -39,6 +39,56 @@ var pushEX1 = {
   "content" : "你那天穿短褲嗎?",
   "account" : "gn01838335",
   "time" : moment().unix(),
+  "floor" : "0",
+  "childfloor" : "0"
+};
+
+var pushEX2 = {
+  //此uid為所屬文章的uid
+  "uid" : "uid1234",
+  "type" : "push",
+  "subType" : "black",
+  "title" : "有沒有五五六六的八卦",
+  "content" : "真神奇 沒人噓?",
+  "account" : "sd09090",
+  "time" : moment().unix(),
+  "floor" : "1",
+  "childfloor" : "0"
+};
+var pushEX3 = {
+  //此uid為所屬文章的uid
+  "uid" : "uid1234",
+  "type" : "push",
+  "subType" : "green",
+  "title" : "有沒有五五六六的八卦",
+  "content" : "胡粉快來噓阿?",
+  "account" : "robertchun",
+  "time" : moment().unix(),
+  "floor" : "2",
+  "childfloor" : "0"
+};
+var Content0 = {
+  //此uid為所屬文章的uid
+  "uid" : "uid1234",
+  "type" : "content",
+  "subType" : "text",
+  "title" : "有沒有五五六六的八卦",
+  "content" : "Angelababy   每次看她的臉都覺得很不自然  但她堅稱自己沒整型  最近剛跟明教教主 黃曉明結婚  鄉民打趣說想看小孩長怎樣  (兩人都疑似整型)",
+  "account" : "joug",
+  "time" : moment().unix(),
+  "floor" : "0",
+  "childfloor" : "0"
+};
+
+var Content1 = {
+  //此uid為所屬文章的uid
+  "uid" : "uid1234",
+  "type" : "content",
+  "subType" : "image",
+  "title" : "有沒有五五六六的八卦",
+  "content" : "http://uid1234image",
+  "account" : "joug",
+  "time" : moment().unix(),
   "floor" : "1",
   "childfloor" : "0"
 };
@@ -84,64 +134,16 @@ var noResult = {
 
 var articleEX = {
   "uid" : "uid1234",
-  "motheruid" : "motheruid1234",
-  "content" : [Content0, Content1],
+  "contents" : [Content0, Content1],
   "signature" : "套一句kobe的話 我會打到我不能打為止  我如果打得很爛 我不會讓我的粉絲看到我很爛的一面 我會自己退出 我覺得如果你有夢想的 就不要怕任何阻礙去追尋 不放手 直到夢想到手 - westdoor",
-  "push" : [pushEX1, pushEX2, pushEX3, pushEX1, pushEX2]
-};
-
-var Content0 = {
-  //此uid為所屬文章的uid
-  "uid" : "uid1234",
-  "type" : "content",
-  "subType" : "text",
-  "title" : "有沒有五五六六的八卦",
-  "content" : "Angelababy   每次看她的臉都覺得很不自然  但她堅稱自己沒整型  最近剛跟明教教主 黃曉明結婚  鄉民打趣說想看小孩長怎樣  (兩人都疑似整型)",
-  "account" : "joug",
-  "time" : moment().unix(),
-  "floor" : "0",
-  "childfloor" : "0"
-};
-
-var Content1 = {
-  //此uid為所屬文章的uid
-  "uid" : "uid1234",
-  "type" : "content",
-  "subType" : "image",
-  "title" : "有沒有五五六六的八卦",
-  "content" : "http://uid1234image",
-  "account" : "joug",
-  "time" : moment().unix(),
-  "floor" : "1",
-  "childfloor" : "0"
+  "pushes" : [pushEX1, pushEX2, pushEX3]
 };
 
 
 
-var pushEX2 = {
-  //此uid為所屬文章的uid
-  "uid" : "uid1234",
-  "type" : "push",
-  "subType" : "black",
-  "title" : "有沒有五五六六的八卦",
-  "content" : "真神奇 沒人噓?",
-  "account" : "sd09090",
-  "time" : moment().unix(),
-  "floor" : "2",
-  "childfloor" : "0"
-};
-var pushEX3 = {
-  //此uid為所屬文章的uid
-  "uid" : "uid1234",
-  "type" : "push",
-  "subType" : "green",
-  "title" : "有沒有五五六六的八卦",
-  "content" : "胡粉快來噓阿?",
-  "account" : "robertchun",
-  "time" : moment().unix(),
-  "floor" : "3",
-  "childfloor" : "0"
-};
+
+
+
 
 
 var wearther = {
