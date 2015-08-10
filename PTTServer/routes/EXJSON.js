@@ -134,6 +134,7 @@ var noResult = {
 
 var articleEX = {
   "uid" : "uid1234",
+  "title" : titleEX,
   "contents" : [Content0, Content1],
   "signature" : "套一句kobe的話 我會打到我不能打為止  我如果打得很爛 我不會讓我的粉絲看到我很爛的一面 我會自己退出 我覺得如果你有夢想的 就不要怕任何阻礙去追尋 不放手 直到夢想到手 - westdoor",
   "pushes" : [pushEX1, pushEX2, pushEX3]

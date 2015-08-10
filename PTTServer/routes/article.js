@@ -15,11 +15,32 @@ router.use(function timeLog(req, res, next) {
 
 /* GET users listing. */
 router.get('/uid', function(req, res) {
-  
+
   switch (req.query.agent) {
     case 'iphone':
     console.log('iphone');
     IphoneArticleCrlt.uid(req, res);
+      break;
+
+    case 'android':
+    console.log('android');
+    res.send(EXJSON.topHint);
+      break;
+
+    default:
+    console.log('web device');
+    res.send(EXJSON.topHint);
+
+  };
+
+});
+
+router.get('/title/uid', function(req, res) {
+
+  switch (req.query.agent) {
+    case 'iphone':
+    console.log('iphone');
+    IphoneArticleCrlt.titleByUid(req, res);
       break;
 
     case 'android':

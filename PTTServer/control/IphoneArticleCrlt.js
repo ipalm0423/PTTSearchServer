@@ -7,8 +7,13 @@ function uid(req, res) {
   res.send(EXJSON.articleEX);
 };
 
-
+function titleByUid(req, res) {
+  var parameters = req.query;
+  console.log(parameters.hint);
+  res.send(EXJSON.titleEX);
+};
 
 
 
 exports.uid = uid;
+exports.titleByUid = titleByUid;
